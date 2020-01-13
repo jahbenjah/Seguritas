@@ -140,7 +140,4 @@
     </Build>
     <Build Include="dbo\Tables\PlanesCoberturas.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="Seguritas.refactorlog" />
-  </ItemGroup>
 </Project>
