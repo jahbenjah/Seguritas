@@ -134,5 +134,13 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
+    <Build Include="dbo\Tables\ClientePlanes.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Tables\PlanesCoberturas.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Seguritas.refactorlog" />
   </ItemGroup>
 </Project>
