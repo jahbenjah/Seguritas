@@ -1,14 +1,14 @@
 # 1.4	Requerimiento
 Se tiene un proyecto para el cliente “Seguritas” el cual es encargado de manejar pólizas de seguros, derivado del cambio del negocio en el cual se van a adicionar nuevos clientes al modelo del negocio, el cliente solicita:
-1.	Generar una nueva interfaz con la cual sea capaz de poder dar mantenimiento a los nuevos clientes, planes y coberturas, teniendo las siguientes consideraciones. 
-a.	Un cliente, plan y cobertura deben tener un número de identificación único. 
-b.	El nombre del cliente, plan y cobertura no puede ir vacío.
-c.	El nombre del cliente debe ser único y no se puede repetir. 
-d.	Un cliente puede tener muchos planes. 
-e.	Un plan puede tener muchas coberturas.
-f.	Una misma cobertura puede pertenecer a múltiples planes. 
-g.	Se necesita alguna manera de saber cuando se crea el registro por temas de auditoría.
 
+1.	Generar una nueva interfaz con la cual sea capaz de poder dar mantenimiento a los nuevos clientes, planes y coberturas, teniendo las siguientes consideraciones. 
+ * a.	Un cliente, plan y cobertura deben tener un número de identificación único. 
+ * b.	El nombre del cliente, plan y cobertura no puede ir vacío.
+ * c.	El nombre del cliente debe ser único y no se puede repetir. 
+ * d.	Un cliente puede tener muchos planes. 
+ * e.	Un plan puede tener muchas coberturas.
+ * f.	Una misma cobertura puede pertenecer a múltiples planes. 
+ * g.	Se necesita alguna manera de saber cuando se crea el registro por temas de auditoría.
 
 2.	La interfaz deberá poder visualizarse en modo responsivo dentro de diferentes dispo-sitivos. 
 
@@ -27,7 +27,7 @@ i.	JavaScript para validaciones del lado del cliente.
 2.	La pantalla principal mostrará un listado de Clientes y su información de la entidad Clientes. 
 3.	Para persistir la información se ocupará SQL Server 2014 o superior.
 4.	Para la solución de los puntos d – g se entregará solo el modelo de datos y toda la administración se llevará mediante scripts directos a la base de datos, se da como primera propuesta las siguientes entidades.
- 
+![BD](Diagrama.PNG)
 *Este esquema puede variar de acuerdo con la necesidad del cliente.
 
 
