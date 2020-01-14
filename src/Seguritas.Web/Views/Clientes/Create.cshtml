@@ -4,7 +4,7 @@
     ViewBag.Title = "Nuevo cliente";
 }
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "new-client" }))
 {
     @Html.AntiForgeryToken()
 
@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guadar" class="btn btn-primary" />
+                <input id="submit" type="submit" value="Guadar" class="btn btn-primary" />
             </div>
         </div>
     </div>
@@ -41,4 +41,14 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(document).ready(function () {
+            $("#submit").click(function () {
+                $.post("https://localhost:44387/api/clientes", $("#new-client").serialize());
+                alert("Cliente creado correctamente");
+                $(location).attr('href','/clientes/index');
+            });
+        });
+    </script>
 }
