@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Seguritas.Api;
+using Seguritas.Api.Models;
 using Seguritas.Core;
 
 namespace Seguritas.Api.Controllers
@@ -19,9 +20,17 @@ namespace Seguritas.Api.Controllers
         private SeguritasContext db = new SeguritasContext();
 
         // GET: api/Clientes
-        public IQueryable<Clientes> GetClientes()
+        public IQueryable<ClientesDTO> GetClientes()
         {
-            return db.Clientes;
+
+            var clientes = from b in db.Clientes
+                           select new ClientesDTO()
+                           {
+                               Id = b.Id,
+                               Nombre = b.Nombre,
+                               FechaModificacion = b.FechaModificacion
+                           };
+            return clientes;
         }
 
         // GET: api/Clientes/5
